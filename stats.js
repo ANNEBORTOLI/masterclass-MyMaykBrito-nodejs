@@ -1,4 +1,5 @@
 const os = require('os');
+const log = require('./logger');
 
 // EventLoop para checar a memória a casa seg
 setInterval(() => {
@@ -15,11 +16,8 @@ const stats = {
   usage: `${percents}%`
 };
 
-console.clear() // limpa o terminal antes de aparecer o próximo log
-console.log('====== PC STATS ======')
+console.clear();
+console.log('====== PC STATS ======');
 console.table(stats);
-}, 1000)
-
-
-
-
+log(`${JSON.stringify(stats)}\n`);
+}, 1000);
