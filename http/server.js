@@ -22,5 +22,5 @@ http.createServer( (req, res) => {
       res.end(content)
     }
   )
-}).listen(5000, () => console.log("Servidor rodando..."));
+}).listen(5000, () => console.log("Servidor rodando na porta 5000..."));
 
